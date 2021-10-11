@@ -1,4 +1,4 @@
-// "http://www.omdbapi.com/?i=tt3896198&apikey=39d0e0e2"
+
 
 
 const btn = document.getElementById('btn')
@@ -13,11 +13,9 @@ async function searchMovies() {
     let data = await res.json()
     showMovies(data.Search)
 }
-searchMovies()
 function showMovies(data) {
-
+    parent.innerHTML= null
     data.forEach(function (movies) {
-        console.log(movies)
         let div = document.createElement("div")
         let div_img = document.createElement("div")
         let img = document.createElement("img")
@@ -43,7 +41,7 @@ function showMovies(data) {
         btn_detail.innerText = "Add To Watchlist"
 
 
-        div_detail.append(year, type,btn_detail)
+        div_detail.append(year, type, btn_detail)
         div_img.append(img, div_detail)
         div.append(div_img, title)
         parent.append(div)
