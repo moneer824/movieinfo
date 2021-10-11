@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    #container {
+        /* background-color: rgb(30, 30, 31); */
+    }
+
+    #parent {
+        /* background: violet; */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        row-gap: 1vh;
+    }
+
+    #parent>div {
+        width: 17%;
+        height: 60vh;
+        /* border: 2px solid black; */
+        /* box-shadow: 2px 2px 6px; */
+
+    }
+
+    #parent>div>div {
+        position: relative;
+        /* background: brown; */
+        height: 80%;
+    }
+
+    #parent>div>div img {
+        box-shadow: 2px 2px 6px;
+        /* background: brown; */
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        /* z-index: 2; */
+        /* border: 4px solid rgb(63, 63, 63); */
+    }
+
+    #parent>div>p {
+        font-size: 2.5vh;
+        text-align: center;
+        margin-top: 1.5vh;
+        padding: 0 1vh;
+        font-weight: bold;
+    }
+
+    .details {
+        height: 60%;
+        width: 100%;
+        background-image: linear-gradient(white, rgb(133, 133, 133));
+        position: absolute;
+        /* z-index: 1; */
+        /* top: 30%; */
+        bottom: 0px;
+        /* display: none; */
+        font-size: 2.5vh;
+        color: rgb(53, 53, 53);
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        row-gap: 10%;
+        font-weight: bold;
+        box-shadow: 2px 2px 6px;
+
+    }
+    .details button{
+        padding: 3%;
+    background-image: linear-gradient(rgb(63, 63, 63), rgb(0, 0, 0));
+
+
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    box-shadow: 2px 2px 4px rgba(0,0,0);
+
+    }
+    .details button:hover{
+    background-color: white;
+    background-image: linear-gradient(rgb(255, 255, 255), rgb(235, 235, 235));
+
+    box-shadow: 2px 2px 4px rgba(0,0,0,.2);
+
+    color: black;
+    cursor: pointer;
+    font-weight: bold;
+/* border:2px solid rgb(53, 53, 53); */
+}
+
+    /* .details */
+</style>
+
+<body>
+    <div id="container">
+        <div id="searchbar">
+            <input id="inp" type="text" placeholder="Enter the movie title">
+            <button id="btn">Search</button>
+        </div>
+        <div id="parent">
+
+        </div>
+    </div>
+    <script src="movies.js"></script>
+</body>
+
+</html>
