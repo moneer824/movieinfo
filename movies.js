@@ -40,9 +40,9 @@ function showMovies(data) {
             div_detail.style.display = 'none'
         }
         let year = document.createElement("p")
-        year.innerText = "Released Date " + movies.Year
+        year.innerText = "Released: " + movies.Year
         let type = document.createElement("p")
-        type.innerText = "Category " + movies.Type
+        type.innerText = "Category: " + movies.Type
         let btn_detail = document.createElement("button")
         btn_detail.innerText = "Add To Watchlist"
         let btn_imbd = document.createElement("a")
