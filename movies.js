@@ -165,7 +165,7 @@ function showMovies(data) {
         // btn_imbd.innerText = "Go to Imdb"
 
 
-        div_detail.append(year, type, btn_detail,btn_imbd)
+        div_detail.append(year, type, btn_detail)
         div_img.append(img, div_detail)
         div.append(div_img, title)
         parent.append(div)

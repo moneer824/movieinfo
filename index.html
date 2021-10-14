@@ -144,15 +144,15 @@
         border: 2px solid rgb(223, 223, 223);
         border-radius: 5px;
         margin: 0 auto;
-        color: black;
-        background-image: linear-gradient(rgb(255, 255, 255), rgb(235, 235, 235));
+        background-image: linear-gradient(rgb(63, 63, 63), rgb(0, 0, 0));
+        color: white;
 
     }
 
     .details button:hover {
-        background-image: linear-gradient(rgb(63, 63, 63), rgb(0, 0, 0));
-        color: white;
-
+        
+        color: black;
+        background-image: linear-gradient(rgb(255, 255, 255), rgb(235, 235, 235));
         box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
 
         cursor: pointer;
@@ -216,7 +216,7 @@
     #discription>div>div:nth-child(1) {
         width: 100%;
         /* height: 40px; */
-        background-color: rgb(184 184 184);
+        background-color: rgb(39 39 39);
         color: #313131;
         display: flex;
         font-size: 1.2em;
@@ -227,10 +227,23 @@
         font-weight: bold;
 
     }
-    #discription>div>div:nth-child(1) div {
-     /* background-color: #630000; */
-     width: 25%;
 
+    #discription>div>div:nth-child(1) div {
+        /* background-color: #630000; */
+        width: 25%;
+
+    }
+
+    #discription>div>div:nth-child(1) span {
+        /* width: 70%; */
+        /* font-weight: bold; */
+        color: white;
+    }
+
+    #discription>div>div:nth-child(1) p {
+        /* width: 70%; */
+        /* font-weight: bold; */
+        color: #ffc800;
     }
 
     #discription>div>div:nth-child(2) {
@@ -280,7 +293,7 @@
     #discription>div>div:nth-child(3) p {
         width: 70%;
         font-weight: bold;
-        color: #630000;
+        color: #8b0808;
     }
 
     @media only screen and (max-width: 600px) {
@@ -332,7 +345,7 @@
 
         #discription>div>div:nth-child(2) {
             width: 100%;
-            height: 395px;
+            height: 410px;
             /* background-color: rgb(231, 65, 65); */
         }
 
@@ -346,6 +359,14 @@
         #discription>div>div:nth-child(1) {
             align-items: baseline;
             font-size: 12px;
+        }
+
+        .details {
+
+            font-size: 10px;
+            row-gap: 6%;
+
+
         }
     }
 </style>
