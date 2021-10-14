@@ -148,10 +148,7 @@ function showMovies(data) {
 
             div_detail.style.display = 'none'
         }
-        let year = document.createElement("p")
-        year.innerText = "Released: " + movies.Year
-        let type = document.createElement("p")
-        type.innerText = "Category: " + movies.Type
+      
         let btn_detail = document.createElement("button")
         btn_detail.innerText = "Open"
         btn_detail.onclick = function () {
@@ -165,7 +162,7 @@ function showMovies(data) {
         // btn_imbd.innerText = "Go to Imdb"
 
 
-        div_detail.append(year, type, btn_detail)
+        div_detail.append(btn_detail)
         div_img.append(img, div_detail)
         div.append(div_img, title)
         parent.append(div)

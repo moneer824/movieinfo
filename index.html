@@ -12,18 +12,26 @@
         margin: 0;
         padding: 0;
     }
+    body{
+        background-color: #096b70;
+        font-family: sans-serif;
+    }
 
     #nav {
         height: 40px;
     }
 
-    #container {
-        background-color: #ededed;
+    /* #container {
+        background-color: #505050;
+    } */
+
+    #container p {
+        color: white;
     }
 
     #searchbar {
         /* background-color: #272727; */
-        background-image: linear-gradient(#575757, rgb(58 57 57));
+        background-image: linear-gradient(#3d3d3d, rgb(35 35 35));
         text-align: center;
         padding: 1% 0;
         position: fixed;
@@ -115,9 +123,9 @@
     }
 
     .details {
-        height: 60%;
+        height: 100%;
         width: 100%;
-        background-image: linear-gradient(white, rgb(133, 133, 133));
+        background-color: rgb(0, 0, 0, .3);
         position: absolute;
         /* z-index: 1; */
         /* top: 30%; */
@@ -144,49 +152,23 @@
         border: 2px solid rgb(223, 223, 223);
         border-radius: 5px;
         margin: 0 auto;
-        background-image: linear-gradient(rgb(63, 63, 63), rgb(0, 0, 0));
+        background-color: rgba(0, 0, 0, .1);
+
         color: white;
 
     }
 
     .details button:hover {
-        
-        color: black;
-        background-image: linear-gradient(rgb(255, 255, 255), rgb(235, 235, 235));
+        background-image: linear-gradient(rgb(63, 63, 63), rgb(0, 0, 0));
+        color: rgb(255, 255, 255);
+        /* background-image: linear-gradient(rgb(255, 255, 255), rgb(235, 235, 235)); */
         box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
 
         cursor: pointer;
         font-weight: bold;
     }
 
-    .details a {
-        width: 90%;
-        margin: 0 auto;
-        /* padding: 5px; */
-        padding: 3%;
 
-        box-shadow: 2px 2px 8px rgb(0 0 0 / 25%);
-        text-decoration: none;
-        font-size: 1em;
-        box-sizing: border-box;
-        border-radius: 5px;
-        background-image: linear-gradient(rgb(63, 63, 63), rgb(0, 0, 0));
-        color: #ffffff;
-        border: 2px solid rgb(223, 223, 223);
-
-    }
-
-    .details a:hover {
-        background-image: linear-gradient(rgb(255, 255, 255), rgb(235, 235, 235));
-        color: #433d3d;
-        border: 2px solid rgb(82, 82, 82);
-
-        /* background-color: rgb(46, 43, 43); */
-
-        /* box-shadow: 2px 2px 8px rgb(0 0 0 / 25%); */
-
-
-    }
 
     #discription {
         width: 100%;
@@ -202,6 +184,7 @@
         /* background-color: rgb(236, 236, 236); */
         margin-top: 45px;
         font-size: 2em;
+        color: white;
     }
 
     #discription>div {
@@ -216,7 +199,7 @@
     #discription>div>div:nth-child(1) {
         width: 100%;
         /* height: 40px; */
-        background-color: rgb(39 39 39);
+        background-color: rgb(47 47 47);
         color: #313131;
         display: flex;
         font-size: 1.2em;
@@ -263,7 +246,7 @@
 
     #discription>div>div:nth-child(3) {
         width: 74%;
-        background: rgb(236 236 236);
+        background: rgb(255 220 89);
         /* text-align: center; */
         font-size: 1.2em;
         padding: 20px;
@@ -287,13 +270,18 @@
     #discription>div>div:nth-child(3) span {
         width: 20%;
         font-weight: bold;
-        color: #313131;
+        color: black;
     }
 
     #discription>div>div:nth-child(3) p {
+        font-family: cursive;
         width: 70%;
         font-weight: bold;
-        color: #8b0808;
+        color: #050505;
+    }
+
+    #logo a {
+        text-decoration: none;
     }
 
     @media only screen and (max-width: 600px) {
@@ -368,6 +356,7 @@
 
 
         }
+
     }
 </style>
 
@@ -376,7 +365,9 @@
         <div id="nav"></div>
         <div id="searchbar">
             <div id="logo">
-                <h4>Movie <span>Info</span></h4>
+                <a href="index.html">
+                    <h4>Movie <span>Info</span></h4>
+                </a>
             </div>
             <div id="sear">
                 <input id="inp" type="text" placeholder="Enter the movie title">
