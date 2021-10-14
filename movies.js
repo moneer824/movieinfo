@@ -47,33 +47,43 @@ function show(movies) {
 
         let title = document.createElement("h1")
         title.innerText = movies.Title
+
         let Runtime = document.createElement("div")
         Runtime.innerHTML =  `<span>Runtime</span> <p>${movies.Runtime}</p>`
+
         let imdbRating = document.createElement("div")
         imdbRating.innerHTML =  `<span>Rating</span> <p>${movies.imdbRating}</p>`
+
         let Type = document.createElement("div")
         Type.innerHTML =  `<span>Type</span> <p>${movies.Type}</p>`
+
         let Language = document.createElement("div")
         Language.innerHTML =  `<span>Language</span> <p>${movies.Language}</p>`
+
         let Genre = document.createElement("div")
         Genre.innerHTML = `<span>Genre</span> <p>${movies.Genre}</p>`
 
         let Released = document.createElement("div")
         Released.innerHTML =  `<span>Release Date</span> <P>${movies.Released}</p>`
-        let BoxOffice = document.createElement("p")
-        BoxOffice.innerHTML =  'BoxOffice: '+movies.BoxOffice
-        let Country = document.createElement("p")
-        Country.innerHTML =  'Country: '+movies.Country
-        let Plot = document.createElement("p")
-        Plot.innerHTML =  'Plot: '+movies.Plot
-        let Awards = document.createElement("p")
-        Awards.innerHTML =  'Awards: '+movies.Awards
-        let Actors = document.createElement("p")
-        Actors.innerHTML =  'Actors: '+movies.Actors
-        let Director = document.createElement("p")
-        Director.innerHTML =  'Director: '+movies.Director
-        let Writer = document.createElement("p")
-        Writer.innerHTML =  'Writer: '+movies.Writer
+
+        let BoxOffice = document.createElement("div")
+        BoxOffice.innerHTML =  `<span>BoxOffice</span> <p>${movies.BoxOffice}</p>`
+
+        let Country = document.createElement("div")
+        Country.innerHTML =  `<span>Country</span> <p>${movies.Country}</p>`
+
+        let Plot = document.createElement("div")
+        Plot.innerHTML =  `<span>Plot</span> <p>${movies.Plot}</p>`
+
+        let Awards = document.createElement("div")
+        Awards.innerHTML =  `<span>Awards</span> <p>${movies.Awards}</p>`
+
+        let Actors = document.createElement("div")
+        Actors.innerHTML =  `<span>Actors</span> <p>${movies.Actors}</p>`
+        let Director = document.createElement("div")
+        Director.innerHTML =  `<span>Director: </span> <p>${movies.Director}</p>`
+        let Writer = document.createElement("div")
+        Writer.innerHTML =  `<span>Writer</span> <p>${movies.Writer}</p>`
         let img = document.createElement("img")
         img.src = movies.Poster
         // let div_detail = document.createElement("div")
@@ -143,7 +153,7 @@ function showMovies(data) {
         let type = document.createElement("p")
         type.innerText = "Category: " + movies.Type
         let btn_detail = document.createElement("button")
-        btn_detail.innerText = "Add To Watchlist"
+        btn_detail.innerText = "Open"
         btn_detail.onclick = function () {
             // console.log(title)
             sea(title.innerText)
