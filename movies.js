@@ -9,7 +9,7 @@ btn.addEventListener("click", searchMovies)
 async function searchMovies() {
     let inp = document.getElementById('inp').value
     if (inp.length == 0) {
-        inp = 'spider-man'
+        inp = 'avengers'
         
     }
     // `http://www.omdbapi.com/?s=${inp}&apikey=39d0e0e2`
@@ -26,7 +26,7 @@ async function searchMovies() {
 async function sea(title) {
     parent.innerHTML = null
 
-    let inp = document.getElementById('inp').value
+
   
     let res = await fetch(
         `https://www.omdbapi.com/?t=${title}&apikey=39d0e0e2`,
