@@ -40,15 +40,21 @@ function show(movies) {
     let div_img = document.createElement("div")
     let div_title = document.createElement("div")
     let div_info = document.createElement("div")
-
-    let title = document.createElement("h1")
-    title.innerText = movies.Title
-
     let Runtime = document.createElement("div")
     Runtime.innerHTML = `<span>Runtime</span> <p>${movies.Runtime}</p>`
 
     let imdbRating = document.createElement("div")
     imdbRating.innerHTML = `<span>Rating</span> <p>${movies.imdbRating}</p>`
+
+    let title = document.createElement("h1")
+    
+    if (Number(movies.imdbRating > 8.5)) {
+        title.innerHTML = movies.Title + '<span>Recommended</span>'
+    }
+    else{
+        title.innerText = movies.Title
+
+    }
 
     let Type = document.createElement("div")
     Type.innerHTML = `<span>Type</span> <p>${movies.Type}</p>`
@@ -82,7 +88,7 @@ function show(movies) {
     Writer.innerHTML = `<span>Writer</span> <p>${movies.Writer}</p>`
     let img = document.createElement("img")
     img.src = movies.Poster
-   
+
     div_title.append(Runtime, imdbRating, Language, Type)
     div_info.append(Genre, Released, BoxOffice, Country, Awards, Actors, Director, Writer, Plot)
     div_img.append(img)
