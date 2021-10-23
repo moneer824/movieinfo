@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <style>
     * {
         margin: 0;
@@ -14,46 +15,49 @@
     }
 
     body {
-        background-color: #096b70;
+        background-color: #0c111b;
         font-family: sans-serif;
     }
 
     #nav {
-        height: 40px;
+        height: 80px;
     }
 
-    /* #container {
-        background-color: #505050;
-    } */
+    #container {
+        color: white;
+    }
 
     #container p {
-        color: white;
+        /* color: white; */
     }
 
     #searchbar {
         /* background-color: #272727; */
-        background-image: linear-gradient(#3d3d3d, rgb(35 35 35));
-        text-align: center;
-        padding: 1% 0;
+        background-color: #131a27;
+        /* text-align: center; */
+        padding: 10px 0;
         position: fixed;
         top: 0;
         z-index: 4;
         width: 100%;
-        box-shadow: 1px 4px 6px rgb(0 0 0 / 70%);
+        /* box-shadow: 1px 4px 6px rgb(0 0 0 / 70%); */
         display: flex;
         align-items: center;
         /* justify-content: center; */
         align-items: center;
         gap: 10%;
+        height: 40px;
+        /* box-sizing: border-box; */
     }
 
     #sear {
-        width: 60%;
+        width: 40%;
         display: flex;
+        position: relative;
     }
 
     #searchbar input {
-        width: 70%;
+        width: 100%;
         height: 35px;
         border-radius: 25px;
         /* text-align: center; */
@@ -69,346 +73,167 @@
         font-size: 2em;
     }
 
-    #searchbar button {
-        width: 20%;
-        height: 35px;
-        border-radius: 25px;
-        text-align: center;
-        font-size: 18px;
-        background-color: white;
-        /* font-weight: bold; */
-        /* color: white; */
-        box-shadow: 2px 2px 6px rgb(177 177 177);
-        cursor: pointer;
-    }
-
-    #parent {
-        /* margin-top: 14vh; */
-        /* background: #84ccff; */
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-
-    }
-
-    #parent>div {
-        width: 17%;
-        height: 480px;
-
-
-    }
-
-    #parent>div>div {
-        position: relative;
-        width: 100%;
-        height: 80%;
-    }
-
-    #parent>div>div img {
-        box-shadow: 2px 2px 6px;
-        /* background: brown; */
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center center;
-        /* z-index: 2; */
-        /* border: 4px solid rgb(63, 63, 63); */
-    }
-
-    #parent>div>p {
-        font-size: 1.2em;
-        text-align: center;
-        margin-top: 10px;
-        padding: 0 5px;
-        font-weight: bold;
-    }
-
-    .details {
-        height: 100%;
-        width: 100%;
-        background-color: rgb(0, 0, 0, .3);
-        position: absolute;
-        /* z-index: 1; */
-        /* top: 30%; */
-        bottom: 0px;
-        /* display: none; */
-        font-size: 1.2em;
-        color: rgb(53, 53, 53);
-        display: flex;
-        flex-direction: column;
-        text-align: center;
-        justify-content: center;
-        row-gap: 10%;
-        font-weight: bold;
-        box-shadow: 2px 2px 6px;
-
-    }
-
-    .details button {
-        width: 90%;
-        padding: 3%;
-        cursor: pointer;
-        font-weight: bold;
-        box-shadow: 2px 2px 4px rgb(0 0 0);
-        border: 2px solid rgb(223, 223, 223);
-        border-radius: 5px;
-        margin: 0 auto;
-        background-color: rgba(0, 0, 0, .1);
-
-        color: white;
-
-    }
-
-    .details button:hover {
-        background-image: linear-gradient(rgb(63, 63, 63), rgb(0, 0, 0));
-        color: rgb(255, 255, 255);
-        /* background-image: linear-gradient(rgb(255, 255, 255), rgb(235, 235, 235)); */
-        box-shadow: 2px 2px 4px rgba(0, 0, 0, .2);
-
-        cursor: pointer;
-        font-weight: bold;
-    }
-
-
-
-    #discription {
-        width: 100%;
-        /* height: 90vh; */
-        /* padding: 12vh 0; */
-        padding-bottom: 70px;
-    }
-
-    #discription h1 {
-        width: 80%;
-        margin: 30px auto;
-        /* height: 40vh; */
-        /* background-color: rgb(236, 236, 236); */
-        margin-top: 45px;
-        font-size: 2em;
-        color: white;
-    }
-
-    #discription h1 span {
-        background: yellowgreen;
-    color: white;
-    padding: 9px 16px;
-    margin: 0 10px;
-    font-size: 15px;
-    vertical-align: middle;
-    box-shadow: 1px 1px 1px 1px rgb(69 65 65);
-    letter-spacing: 1px;
-    }
-
-    #discription>div {
-        flex-wrap: wrap;
-        display: flex;
-        width: 80%;
-        margin: auto;
-        /* height: 60vh; */
-        /* box-shadow: 2px 2px 10px rgba(0, 0, 0, .6); */
-        gap: 2%;
-    }
-
-    #discription>div>div:nth-child(1) {
-        width: 100%;
-        /* height: 40px; */
-        background-color: rgb(47 47 47);
-        color: #313131;
-        display: flex;
-        font-size: 1.2em;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1% 3%;
-        box-sizing: border-box;
-        font-weight: bold;
-        margin: 0 0 25px;
-        border-radius: 8px;
-
-    }
-
-    #discription>div>div:nth-child(1) div {
-        /* background-color: #630000; */
-        /* width: 25%; */
-        display: flex;
-        gap: 10px;
-
-
-
-    }
-
-    #discription>div>div:nth-child(1) span {
-        /* width: 70%; */
-        /* font-weight: bold; */
-        color: white;
-    }
-
-    #discription>div>div:nth-child(1) p {
-        /* width: 70%; */
-        /* font-weight: bold; */
-        color: #ffc800;
-    }
-
-    #discription>div>div:nth-child(2) {
-        width: 26%;
-        height: 470px;
-
-        /* background-color: rgb(231, 65, 65); */
-    }
-
-    #discription>div>div img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        /* background-color: rgb(231, 65, 65); */
-        object-position: center center;
-        border-radius: 8px;
-
-    }
-
-    #discription>div>div:nth-child(3) {
-        width: 72%;
-        background: rgb(255 220 89);
-        /* text-align: center; */
-        font-size: 1.2em;
-        padding: 20px;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        box-sizing: border-box;
-        border-radius: 8px;
-
-
-    }
-
-    #discription>div>div:nth-child(3) div {
-        /* background: rgb(163, 163, 163); */
-        /* text-align: center; */
-        display: flex;
-        gap: 10%;
-        /* justify-content: space-between; */
-
-    }
-
-    #discription>div>div:nth-child(3) span {
-        width: 20%;
-        font-weight: bold;
-        color: black;
-    }
-
-    #discription>div>div:nth-child(3) p {
-        font-family: cursive;
-        width: 70%;
-        font-weight: bold;
-        color: #050505;
-    }
-
     #logo a {
         text-decoration: none;
     }
 
-    @media only screen and (max-width: 600px) {
-        #searchbar button {
-            width: 30%;
-            font-size: 14px;
+    #movies {
+        width: 100%;
+        height: 600px;
+        background-color: #131a27;
+        position: absolute;
+        top: 40px;
+        overflow: scroll;
+        color: white;
+        display: none;
 
-        }
+    }
 
-        #searchbar input {
+    #movies p {
+        font-size: 1.5em;
 
-            font-size: 13px;
-        }
+    }
 
-        #logo h4 {
-
-            font-size: 1em;
-        }
-
-        #discription>div>div:nth-child(1) div {
-            /* background-color: #630000; */
-            width: 25%;
-            display: block;
-
-        }
-
-        #parent>div {
-            width: 46%;
-            height: 286px;
-            margin: 4px 0;
-            /* border: 2px solid black; */
-            /* box-shadow: 2px 2px 6px; */
-        }
-
-        #parent>div>div {
-            height: 85%;
-
-            /* border: 2px solid black; */
-            /* box-shadow: 2px 2px 6px; */
-        }
-
-        #parent>div>p {
-            font-size: 12px;
-            text-align: center;
-            margin: 10px 0;
-            padding: 0 5px;
-            font-weight: bold;
-        }
-
-        #discription h1 {
-            width: 80%;
-            margin: 13px auto;
-            /* height: 40vh; */
-            /* background-color: rgb(236, 236, 236); */
-            /* margin-top: 45px; */
-            font-size: 1.5em;
-            text-align: center;
-        }
-
-        #discription>div {
-            flex-direction: column;
-        }
-
-        #discription>div>div:nth-child(2) {
-            width: 100%;
-            height: 410px;
-            /* background-color: rgb(231, 65, 65); */
-        }
-
-        #discription>div>div:nth-child(3) {
-            width: 100%;
-            /* text-align: center; */
-            font-size: 13px;
-            gap: 10px;
-            margin-top: 20px
-        }
-
-        #discription>div>div:nth-child(1) {
-            align-items: baseline;
-            font-size: 12px;
-            text-align: center;
-            padding: 10px;
-        }
-
-        .details {
-
-            font-size: 10px;
-            row-gap: 6%;
-
-
-        }
-
-        #discription>div>div:nth-child(1) span {
-            /* width: 70%; */
-            /* font-weight: bold; */
-            color: white;
-            line-height: 25px;
-        }
+    #movies>div {
+        margin: 15px;
+        display: flex;
+        height: 30%;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #192133;
+        border-radius: 10px;
+        cursor: pointer;
+        /* border: 1 px solid rgb(27, 151, 2); */
 
 
     }
+
+    #movies>div>div:nth-child(1) {
+        width: 20%;
+        height: 100%;
+        /* border: 3px solid red; */
+    }
+
+    #movies img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center center;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+    }
+
+    #movies>div>div:nth-child(2) {
+        width: 80%;
+        height: 100%;
+        /* background-color: silver; */
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    #movies button {
+        font-weight: 900;
+        position: fixed;
+        color: white;
+        background: none;
+    }
+
+
+    @media only screen and (max-width: 600px) {
+
+#searchbar input {
+
+    font-size: 13px;
+}
+
+#logo h4 {
+
+    font-size: 1em;
+}
+
+#discription>div>div:nth-child(1) div {
+    /* background-color: #630000; */
+    width: 25%;
+    display: block;
+
+}
+
+#discription h1 {
+    width: 80%;
+    margin: 13px auto;
+    /* height: 40vh; */
+    /* background-color: rgb(236, 236, 236); */
+    /* margin-top: 45px; */
+    font-size: 1.5em;
+    text-align: center;
+}
+
+#discription>div {
+    flex-direction: column;
+}
+
+#discription>div>div:nth-child(2) {
+    width: 100%;
+    height: 410px;
+    /* background-color: rgb(231, 65, 65); */
+}
+
+#discription>div>div:nth-child(3) {
+    width: 100%;
+    /* text-align: center; */
+    font-size: 13px;
+    gap: 10px;
+    margin-top: 20px
+}
+
+#discription>div>div:nth-child(1) {
+    align-items: baseline;
+    font-size: 12px;
+    text-align: center;
+    padding: 10px;
+}
+
+
+#discription>div>div:nth-child(1) span {
+    /* width: 70%; */
+    /* font-weight: bold; */
+    color: white;
+    line-height: 25px;
+}
+
+#movies>div {
+    flex-direction: column;
+}
+
+#movies>div>div:nth-child(1) {
+    width: 43%;
+    height: 67%;
+    margin: 10px;
+}
+
+#movies p {
+    font-size: 14px;
+    text-align: center;
+}
+
+#sear {
+    width: 60%;
+
+}
+
+#movies img {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+}
+ 
+
+    
 </style>
 
-<body onload="searchMovies()">
+<body>
+
+
     <div id="container">
         <div id="nav"></div>
         <div id="searchbar">
@@ -418,17 +243,18 @@
                 </a>
             </div>
             <div id="sear">
-                <input id="inp" type="text" placeholder="Enter the movie title">
-                <button id="btn">Search</button>
+                <input oninput="debounce(main,1000)" type="text" id="inp" placeholder="Enter movie Name">
+                <div id="movies">
+                </div>
             </div>
         </div>
-        <div id="discription">
+        <h1>welcome to Home</h1>
 
-        </div>
-        <div id="parent">
-
-        </div>
     </div>
+
+
+
+
     <script src="movies.js"></script>
 </body>
 
