@@ -1,6 +1,8 @@
 var timerId;
 let mov = document.getElementById("movies")
 let trend = document.getElementById("trend")
+let next = document.getElementById("next")
+var c = 1
 async function searchMovies(movie_name) {
     try {
 
@@ -40,9 +42,9 @@ function appendMovies(movies) {
         let Title = document.createElement("p")
         Title.innerText = movies.Title;
         img.src = movies.Poster
-        
+
         div.onclick = function () {
-            localStorage.setItem('Title',JSON.stringify(movies.Title))
+            localStorage.setItem('Title', JSON.stringify(movies.Title))
             window.location.href = "search.html"
         }
 
@@ -87,19 +89,19 @@ function debounce(func, delay) {
 
 
 async function trendingMovies() {
-  
+
+    
+
+    let res = await fetch(
+        `https://api.themoviedb.org/3/movie/popular?api_key=cd62bbe4e53a5038024d8cd788f6541b&language=en-US&page=${c}`
+
+    );
+    let data = await res.json();
+    console.log(data.results)
+    // return data.Search
+    trending(data.results)
 
 
-        let res = await fetch(
-            `https://api.themoviedb.org/3/movie/popular?api_key=cd62bbe4e53a5038024d8cd788f6541b&language=en&page=1`
-
-        );
-        let data = await res.json();
-        console.log(data.results)
-        // return data.Search
-        trending(data.results)
-       
-   
 }
 
 trendingMovies()
@@ -114,9 +116,9 @@ function trending(movies) {
         img.src = `https://image.tmdb.org/t/p/w500/${movies.poster_path}`
         let original_title = document.createElement("p")
         original_title.innerText = movies.original_title;
-        
+
         div.onclick = function () {
-            localStorage.setItem('Title',JSON.stringify(movies.original_title))
+            localStorage.setItem('Title', JSON.stringify(movies.original_title))
             window.location.href = "search.html"
         }
 
@@ -128,4 +130,10 @@ function trending(movies) {
 
     });
 
+}
+
+next.onclick = function () {
+    c++
+    console.log(c)
+    trendingMovies()
 }

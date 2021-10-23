@@ -27,7 +27,7 @@
         color: white;
     }
 
-  
+
     #searchbar {
         /* background-color: #272727; */
         background-color: #131a27;
@@ -154,7 +154,7 @@
         border-radius: 10px;
     }
 
-   
+
 
     #trend>div>div:nth-child(2) {
         /* background-color: rgb(217, 255, 0); */
@@ -175,6 +175,30 @@
 
     #pop {
         margin: 10px 40px;
+    }
+
+    #view {
+        width: 100%;
+        /* background-color: tomato; */
+        /* margin: auto; */
+        text-align: center;
+    }
+
+    #next {
+        cursor: pointer;
+        color: aquamarine;
+        background: #000000;
+        padding: 10px 60px;
+        font-weight: bold;
+        border: 2px solid aquamarine;
+        margin: 20px;
+        margin-bottom: 40px;
+    }
+    #next:hover {
+        cursor: pointer;
+        color: black;
+        background: aquamarine;
+      
     }
 
 
@@ -270,7 +294,7 @@
             width: 28%;
             height: 212px;
             margin: 5px;
-           
+
         }
     }
 </style>
@@ -294,7 +318,9 @@
         </div>
         <h1 id="pop">Popular Movies</h1>
         <div id="trend"></div>
-
+        <div id="view">
+            <button id="next">View More</button>
+        </div>
     </div>
 
 
