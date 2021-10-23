@@ -60,7 +60,7 @@ function appendMovies(movies) {
 async function main() {
     let name = document.getElementById('inp').value
     if (name.length < 3) {
-
+        mov.style.display = 'none'
         return false
     }
 
