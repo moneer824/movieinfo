@@ -1,5 +1,6 @@
 var timerId;
 let mov = document.getElementById("movies")
+let trend = document.getElementById("trend")
 async function searchMovies(movie_name) {
     try {
 
@@ -9,7 +10,7 @@ async function searchMovies(movie_name) {
 
         );
         let data = await res.json();
-        console.log(data)
+        // console.log(data)
         return data.Search
         // appendMovies(data.Search)
     } catch (e) {
@@ -80,4 +81,51 @@ function debounce(func, delay) {
     timerId = setTimeout(function () {
         func();
     }, delay)
+}
+
+// console.log(fetch("https://api.themoviedb.org/3/trending/all/day?api_key=cd62bbe4e53a5038024d8cd788f6541b"))
+
+
+async function trendingMovies() {
+  
+
+
+        let res = await fetch(
+            `https://api.themoviedb.org/3/movie/popular?api_key=cd62bbe4e53a5038024d8cd788f6541b&language=en&page=1`
+
+        );
+        let data = await res.json();
+        console.log(data.results)
+        // return data.Search
+        trending(data.results)
+       
+   
+}
+
+trendingMovies()
+
+function trending(movies) {
+    movies.forEach(function (movies) {
+
+        let div = document.createElement("div")
+        let div_img = document.createElement("div")
+        let div_title = document.createElement("div")
+        let img = document.createElement("img")
+        img.src = `https://image.tmdb.org/t/p/w500/${movies.poster_path}`
+        let original_title = document.createElement("p")
+        original_title.innerText = movies.original_title;
+        
+        div.onclick = function () {
+            localStorage.setItem('Title',JSON.stringify(movies.original_title))
+            window.location.href = "search.html"
+        }
+
+        div_img.append(img)
+        div_title.append(original_title)
+        div.append(div_img, div_title)
+
+        trend.append(div)
+
+    });
+
 }
