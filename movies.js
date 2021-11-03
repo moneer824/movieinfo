@@ -44,7 +44,8 @@ function appendMovies(movies) {
         img.src = movies.Poster
 
         div.onclick = function () {
-            localStorage.setItem('Title', JSON.stringify(movies.Title))
+            // localStorage.setItem('Title', JSON.stringify(movies.Title))
+            localStorage.setItem('Title', JSON.stringify(movies))
             window.location.href = "search.html"
         }
 
