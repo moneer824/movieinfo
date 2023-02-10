@@ -8,12 +8,13 @@ async function searchMovies(movie_name) {
 
 
         let res = await fetch(
-            `https://www.omdbapi.com/?s=${movie_name}&apikey=39d0e0e2`,
+            // `https://www.omdbapi.com/?s=${movie_name}&apikey=39d0e0e2`,
+            `https://api.themoviedb.org/3/search/movie?api_key=cd62bbe4e53a5038024d8cd788f6541b&language=en-US&query=${movie_name}&page=1&include_adult=true`
 
         );
         let data = await res.json();
         // console.log(data)
-        return data.Search
+        return data.results
         // appendMovies(data.Search)
     } catch (e) {
         console.log(e)
@@ -22,6 +23,7 @@ async function searchMovies(movie_name) {
 
 
 function appendMovies(movies) {
+    console.log(movies)
     if (movies === undefined) {
         return false
     }
@@ -40,8 +42,9 @@ function appendMovies(movies) {
         let div_title = document.createElement("div")
         let img = document.createElement("img")
         let Title = document.createElement("p")
-        Title.innerText = movies.Title;
-        img.src = movies.Poster
+        Title.innerText = movies.original_title;
+        // img.src = movies.Poster
+        img.src = `https://image.tmdb.org/t/p/w500/${movies.poster_path}`
 
         div.onclick = function () {
             // localStorage.setItem('Title', JSON.stringify(movies.Title))
@@ -70,7 +73,7 @@ async function main() {
 
     console.log(name)
     let res = await searchMovies(name)
-    console.log(res)
+    // console.log(res)
     mov.style.display = 'block'
     appendMovies(res)
 
@@ -94,6 +97,7 @@ async function trendingMovies() {
     
 
     let res = await fetch(
+        // `https://api.themoviedb.org/3/movie/popular?api_key=cd62bbe4e53a5038024d8cd788f6541b&language=en-US&page=${c}`
         `https://api.themoviedb.org/3/movie/popular?api_key=cd62bbe4e53a5038024d8cd788f6541b&language=en-US&page=${c}`
 
     );
@@ -119,7 +123,7 @@ function trending(movies) {
         original_title.innerText = movies.original_title;
 
         div.onclick = function () {
-            localStorage.setItem('Title', JSON.stringify(movies.original_title))
+            localStorage.setItem('Title', JSON.stringify(movies))
             window.location.href = "search.html"
         }
 
